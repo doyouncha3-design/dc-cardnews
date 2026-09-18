@@ -746,6 +746,7 @@ const cardUrl = (p, i) => `${p.base_url}/card-${String(i + 1).padStart(2, '0')}.
 async function fetchPosts() {
   try { posts = await (await sfetch('dc_posts?select=*&order=date.desc,slug.desc')).json(); }
   catch (e) { return; }
+  if (!Array.isArray(posts)) { posts = []; }
   document.getElementById('gallery-strip').innerHTML = posts.map((p, i) =>
     `<div class="g-item" onclick="openViewer(${i})">
       <img src="${cardUrl(p, 0)}" loading="lazy" alt="${esc(p.title)}">
@@ -784,6 +785,7 @@ const evRow = (e) => `<div class="ev-row">
 async function fetchEvidence() {
   try {
     const rows = await (await sfetch('dc_evidence?select=slug,items')).json();
+    if (!Array.isArray(rows)) return;
     evidence = Object.fromEntries(rows.map(r => [r.slug, r.items]));
   } catch (e) { return; }
   renderEvTabs();
@@ -817,6 +819,7 @@ async function fetchRequests() {
   let reqs;
   try { reqs = await (await sfetch('dc_requests?select=*&order=id.desc&limit=8')).json(); }
   catch (e) { return; }
+  if (!Array.isArray(reqs)) { reqs = []; }
   document.getElementById('req-list').innerHTML = reqs.map(r =>
     `<div class="req-row">
       <span class="req-badge ${r.status}">${BADGE[r.status] || r.status}</span>
