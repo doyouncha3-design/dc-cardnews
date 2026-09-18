@@ -492,12 +492,12 @@ const BRANDS = { 'hana-bank':'하나은행','kb-bank':'KB국민은행','mirae-as
 
 // ---------- 캐릭터/무대 설정 ----------
 const ROLES = {
-  chief:      { name:'무결',   role:'편집장',  shirt:'#3a4a6b', hair:'#2c2c2c', skin:'#f2c9a0' },
-  researcher: { name:'윤호',   role:'리서처',  shirt:'#8a6d3b', hair:'#5b3a1e', skin:'#f2c9a0' },
-  writer:     { name:'연아',   role:'작가',    shirt:'#1454FF', hair:'#6b4226', skin:'#ffd9b0' },
-  designer:   { name:'지디',   role:'디자이너', shirt:'#c2437e', hair:'#e0b830', skin:'#f2c9a0' },
-  reviewer:   { name:'개빡빡', role:'검수자',  shirt:'#0a9d58', hair:'#3d3d3d', skin:'#e8b98a' },
-  publisher:  { name:'막뿌려', role:'발행인',  shirt:'#e07b00', hair:'#111', skin:'#ffd9b0' },
+  chief:      { name:'도윤채VP', role:'편집장',  shirt:'#3a4a6b', hair:'#2c2c2c', skin:'#f2c9a0' },
+  researcher: { name:'나연',   role:'리서처',  shirt:'#8a6d3b', hair:'#5b3a1e', skin:'#f2c9a0' },
+  writer:     { name:'진숙',   role:'작가',    shirt:'#1454FF', hair:'#6b4226', skin:'#ffd9b0' },
+  designer:   { name:'태호',   role:'디자이너', shirt:'#c2437e', hair:'#e0b830', skin:'#f2c9a0' },
+  reviewer:   { name:'무결',   role:'검수자',  shirt:'#0a9d58', hair:'#3d3d3d', skin:'#e8b98a' },
+  publisher:  { name:'춘천',   role:'발행인',  shirt:'#e07b00', hair:'#111', skin:'#ffd9b0' },
 };
 // 회사식 2열 데스크 아일랜드: A열(위) 3석 + B열(아래) 2석, 편집장은 별실
 const ISLANDS = { A: { x:340, y:150, w:470 }, B: { x:340, y:250, w:470 } };
@@ -891,6 +891,16 @@ const JOKES = [
   { q: '은행이 제일 좋아하는 운동은?', p: '적금 들기' },
   { q: 'ETF가 인기 많은 이유는?', p: '분산돼서 부담이 없대' },
   { q: '아침에 제일 바쁜 새는?', p: '어제 못 잔 새' },
+  { q: 'DC형 가입자가 제일 무서워하는 말은?', p: '운용지시 안 하셨네요' },
+  { q: '연금이 감기 걸리면?', p: '연금 콜록(록)' },
+  { q: '퇴직연금이 제일 싫어하는 계절은?', p: '중도인출철' },
+  { q: '연금저축이 늦잠 자면?', p: '납입 마감 놓침… (12월 31일)' },
+  { q: 'S&P500이 500인 이유는?', p: '499는 뭔가 아쉬워서' },
+  { q: '반도체 ETF가 제일 잘하는 요리는?', p: '웨이퍼(웨하스) 과자' },
+  { q: '세액공제가 제일 좋아하는 숫자는?', p: '900만' },
+  { q: '디폴트옵션이 하는 인사는?', p: '알아서 굴러갈게요~' },
+  { q: '나스닥100이 다이어트하면?', p: '나스닥90… 은 없습니다' },
+  { q: '펀드가 화나면?', p: '펀드 폭발 (환매 안 됨)' },
 ];
 const SMALLTALK = [
   '커피 한 잔 더 마실까…',
@@ -899,7 +909,7 @@ const SMALLTALK = [
   '라면엔 역시 계란이지',
   '탁구 한 판 하실 분~',
   '연금 납입했더니 마음이 편-안',
-  '댓글 반응 좋던데요, 우리',
+  '담당자분들 반응 좋던데요, 우리',
   '스트레칭 한번 하고…',
   '오늘도 무사히 발행 완료~',
   '간식 선반에 뭐 새로 들어왔나',
@@ -915,12 +925,12 @@ const REACTIONS = [
   '재밌…네요 (동공지진)',
 ];
 const ROLE_LINES = {
-  chief:      ['우리 편집국 요즘 실적 좋아', '다들 쉬엄쉬엄 해~', '결재할 게 없으니 심심하군'],
+  chief:      ['우리 제작소 요즘 실적 좋아', '다들 쉬엄쉬엄 해~', '승인할 게 없으니 심심하군', '연말 상담 시즌이 온다…'],
   researcher: ['방금 흥미로운 기사 봤는데…', '팩트는 체크해야 제맛이지'],
   writer:     ['문장이 자꾸 머릿속에 맴돌아', '오늘은 글이 잘 써질 것 같아'],
   designer:   ['파란색은 언제 봐도 예뻐', '픽셀 하나가 아쉽단 말이지'],
   reviewer:   ['쉬는 중에도 오타가 보여…', '완벽한 카드란 없는 걸까'],
-  publisher:  ['좋아요 알림 소리 참 좋다', '다음 게시물 각 잡아야지'],
+  publisher:  ['카톡 전송 완료 소리 참 좋다', '다음 판매사 세트 각 잡아야지'],
 };
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
